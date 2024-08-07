@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+@use "styles/mixins" as *;
+
+/* Importing Bootstrap SCSS file. */
+@import "bootstrap/scss/bootstrap";
+
+@import "@fortawesome/fontawesome-free/css/all.min";
+
+@font-face {
+  font-family: euclid;
+  src: url(./assets/fonts/Euclid\ Circular\ A\ Light.ttf);
+}
+
+:root {
+  --primary: #282828;
+  --yellow: #f7ee32;
+}
+
+* {
+  font-size: 14px;
+
+  @include screen(small) {
+    font-size: 16px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: euclid;
+  background-color: #fff;
+  color: var(--primary);
+}
+
+figure {
+  margin: 0;
+}
+
+a {
+  color: var(--primary);
+  font-weight: 600;
+}

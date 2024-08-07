@@ -1,0 +1,30 @@
+.first-content {
+  background-color: var(--yellow);
+  padding: 1rem 2rem;
+  text-align: end;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1272px;
+  margin: 0 auto;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  border-radius: 50%;
+  padding: 0.5rem 0.7rem;
+
+  &:hover {
+    scale: 1.1;
+    transition: all 0.8s;
+  }
+
+  > i {
+    font-size: 2.5rem;
+  }
+}
