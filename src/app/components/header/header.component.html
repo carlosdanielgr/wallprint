@@ -1,1 +1,40 @@
-<p>header works!</p>
+<header class="header d-flex align-items-center">
+  <figure role="button" class="header__logo" (click)="onInit()">
+    <img src="./assets/images/logo.png" alt="Logo" />
+  </figure>
+  <div ngbDropdown container="body">
+    <button type="button" class="header__menu btn" ngbDropdownToggle>
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="header__dropdown" ngbDropdownMenu aria-labelledby="Menu">
+      <a href="#" ngbDropdownItem>Nuestro trabajo</a>
+      <a href="#" ngbDropdownItem>¿Para quién trabajamos?</a>
+      <a href="#" ngbDropdownItem>¿Por qué elegir WallPrint?</a>
+      <a href="#" ngbDropdownItem>Antes y después</a>
+      <a href="#" ngbDropdownItem>Galería</a>
+    </div>
+  </div>
+  <nav class="header__navbar navbar">
+    <div class="header__title">
+      <img src="./assets/images/logo.png" alt="logo" />
+      <span>Wall<strong>Print</strong></span>
+    </div>
+    <ul class="navbar-nav gap-4">
+      <li class="nav-item">
+        <a href="#">Nuestro trabajo</a>
+      </li>
+      <li class="nav-item">
+        <a href="#">¿Para quién trabajamos?</a>
+      </li>
+      <li class="nav-item">
+        <a href="#">¿Por qué elegir WallPrint?</a>
+      </li>
+      <li class="nav-item">
+        <a href="#">Antes y después</a>
+      </li>
+      <li class="nav-item">
+        <a href="#">Galería</a>
+      </li>
+    </ul>
+  </nav>
+</header>

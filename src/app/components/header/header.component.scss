@@ -1,0 +1,90 @@
+@use "../../../styles/mixins" as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 65px;
+  border-top: 1px solid #939393;
+  border-bottom: 1px solid #939393;
+
+  &__logo {
+    padding: 0 1.5rem;
+    height: 65px;
+    border-right: 1px solid #939393;
+    @include screen(custom, max, 768) {
+      display: none;
+    }
+    > img {
+      height: 100%;
+    }
+  }
+
+  &__title {
+    letter-spacing: 8px;
+    > img {
+      width: 50px;
+    }
+    @include screen(custom, min, 768) {
+      display: none;
+    }
+  }
+
+  &__navbar {
+    flex: 1 1 auto;
+    justify-content: center;
+
+    .navbar-nav {
+      flex: 1 1 auto;
+      flex-direction: row;
+      justify-content: center;
+
+      @include screen(custom, max, 768) {
+        display: none;
+      }
+    }
+
+    .nav-item {
+      &:not(&:first-child) {
+        > a {
+          text-decoration: none;
+        }
+      }
+      a {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  &__dropdown {
+    box-shadow: 2px 3px 5px #00000070;
+    > a {
+      font-size: 1.2rem;
+      padding: 1rem;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    border-style: none;
+    border-radius: 0;
+    border-right: 1px solid #939393;
+
+    > i {
+      font-size: 1.5rem;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .dropdown,
+  &__dropdown {
+    @include screen(small) {
+      display: none;
+    }
+  }
+}
