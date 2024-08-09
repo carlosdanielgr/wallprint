@@ -49,3 +49,17 @@ img {
 button {
   border-radius: 0 !important;
 }
+
+article {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  @include screen(med-small) {
+    font-size: 3rem;
+  }
+}

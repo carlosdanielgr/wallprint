@@ -6,8 +6,6 @@
   @include screen(med-small) {
     padding: 2rem;
     grid-template-columns: repeat(2, 1fr);
-    max-width: 1200px;
-    margin: 0 auto;
     > button {
       justify-self: start;
       font-size: 1.5rem;
@@ -56,10 +54,10 @@
     }
   }
   &__image {
-    aspect-ratio: 560/568;
-    > img {
-      max-width: 35rem;
-      margin: 0 auto;
+    margin: 0 auto;
+    max-width: 35rem;
+    @include screen(small) {
+      aspect-ratio: 1/1;
     }
     @include screen(med-small) {
       grid-row: 1/4;
@@ -75,9 +73,11 @@
   }
   &__banner-img {
     height: calc(7rem + 5vw);
-    margin-top: -4rem;
     > img {
       height: 100%;
+    }
+    @include screen(med-small) {
+      margin-top: -4rem;
     }
   }
 }

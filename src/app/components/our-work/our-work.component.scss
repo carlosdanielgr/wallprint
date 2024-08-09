@@ -1,0 +1,25 @@
+.our-work {
+  padding: 1rem;
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    > img {
+      filter: drop-shadow(7px 7px 0px #000000);
+    }
+    > button {
+      max-width: fit-content;
+      padding: 1rem 0.5rem;
+    }
+    > p {
+      flex: 1;
+      padding: 1rem 0;
+      border-top: 1px solid #000000;
+      border-bottom: 1px solid #000000;
+    }
+  }
+}
