@@ -5,6 +5,7 @@ import { TitleContentComponent } from './components/title-content/title-content.
 import { OurWorkComponent } from './components/our-work/our-work.component';
 import { WeWorkComponent } from './components/we-work/we-work.component';
 import { WhyChooseComponent } from './components/why-choose/why-choose.component';
+import { BeforeAfterComponent } from './components/before-after/before-after.component';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +16,7 @@ import { WhyChooseComponent } from './components/why-choose/why-choose.component
     OurWorkComponent,
     WeWorkComponent,
     WhyChooseComponent,
+    BeforeAfterComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

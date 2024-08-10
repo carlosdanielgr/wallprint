@@ -1,1 +1,25 @@
-<p>before-after works!</p>
+<div class="before-after">
+  <article>
+    <h4 class="subtitle mb-4">Antes y después</h4>
+    <p class="text-center">
+      Descubre cómo nuestros murales pueden transformar cualquier superficie.
+    </p>
+    <ngb-carousel
+      class="before-after__carousel"
+      [showNavigationIndicators]="false"
+    >
+      @for (item_images of images; track $index) {
+      <ng-template ngbSlide>
+        <div class="before-after__images">
+          @for (item of item_images; track $index) {
+          <figure class="before-after__image">
+            <img [src]="item" alt="image" />
+          </figure>
+          }
+        </div>
+      </ng-template>
+      }
+    </ngb-carousel>
+  </article>
+  <app-border-button name="¿Quieres saber más?" />
+</div>
