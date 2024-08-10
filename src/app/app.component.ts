@@ -4,6 +4,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { TitleContentComponent } from './components/title-content/title-content.component';
 import { OurWorkComponent } from './components/our-work/our-work.component';
 import { WeWorkComponent } from './components/we-work/we-work.component';
+import { WhyChooseComponent } from './components/why-choose/why-choose.component';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,7 @@ import { WeWorkComponent } from './components/we-work/we-work.component';
     TitleContentComponent,
     OurWorkComponent,
     WeWorkComponent,
+    WhyChooseComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

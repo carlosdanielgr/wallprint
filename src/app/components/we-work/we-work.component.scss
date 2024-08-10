@@ -1,5 +1,6 @@
 .we-work {
   padding: 1rem;
+  margin-bottom: 5rem;
   &__list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -11,8 +12,9 @@
     gap: 1rem;
     padding: 1rem;
     box-shadow: 5px 5px 1px #000;
-    > span:nth-child(1),
+    > span:first-child,
     i {
+      font-weight: 600;
       font-size: 2rem;
     }
     &:nth-child(odd) {
