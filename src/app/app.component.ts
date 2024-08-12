@@ -10,6 +10,7 @@ import { MakeSpaceComponent } from './components/make-space/make-space.component
 import { VideoComponent } from './components/video/video.component';
 import { FormComponent } from './components/form/form.component';
 import { FaqsComponent } from './components/faqs/faqs.component';
+import { SubscribeComponent } from './components/subscribe/subscribe.component';
 
 @Component({
   selector: 'app-root',
@@ -25,6 +26,7 @@ import { FaqsComponent } from './components/faqs/faqs.component';
     VideoComponent,
     FormComponent,
     FaqsComponent,
+    SubscribeComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

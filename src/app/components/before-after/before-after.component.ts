@@ -26,7 +26,7 @@ export class BeforeAfterComponent {
 
   constructor() {
     if (window.innerWidth > 992) this.splitArray(3);
-    else if (window.innerWidth > 450) this.splitArray(2);
+    else if (window.innerWidth > 400) this.splitArray(2);
     else this.splitArray(1);
   }
 

@@ -12,8 +12,16 @@
   }
   &__images {
     display: flex;
+    align-items: center;
     gap: 1rem;
     width: 90%;
+    height: calc(200px + 12vw);
     margin: 0 auto;
+    > img {
+      height: 100%;
+    }
+    @include screen(small) {
+      height: 277px;
+    }
   }
 }
