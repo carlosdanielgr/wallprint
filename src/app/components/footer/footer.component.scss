@@ -1,0 +1,50 @@
+@use "../../../styles/mixins" as *;
+
+.footer {
+  padding: 3rem 1rem;
+  background-color: #000;
+  color: #fff;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    > div,
+    > span {
+      flex: 1;
+    }
+    @include screen(custom, max, 992) {
+      flex-direction: column;
+      justify-content: center;
+      gap: 3rem;
+    }
+  }
+  &__content-logo {
+    display: flex;
+    flex-direction: column;
+    > div {
+      max-width: 150px;
+    }
+    span {
+      letter-spacing: 8px;
+      font-size: 1.2rem;
+    }
+    @include screen(custom, max, 992) {
+      align-items: center;
+    }
+  }
+  > span {
+    font-size: 1.5rem;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include screen(med-small) {
+      align-items: end;
+    }
+    > span {
+      font-size: 0.8rem;
+    }
+  }
+}
