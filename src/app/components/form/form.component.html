@@ -1,1 +1,85 @@
-<p>form works!</p>
+<article class="form">
+  <h4 class="subtitle mb-4">Contáctanos y cuéntanos tu idea</h4>
+  <form class="form__inputs">
+    <div class="form__content-input">
+      <div></div>
+      <input type="text" class="form-control" placeholder="Nombre Completo" />
+    </div>
+    <div class="form__content-input">
+      <div></div>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Correo Electrónico"
+      />
+    </div>
+    <div class="form__content-input">
+      <div></div>
+      <input type="text" class="form-control" placeholder="Teléfono" />
+    </div>
+    <div class="form__content-input">
+      <div></div>
+      <input type="text" class="form-control" placeholder="Colonia" />
+    </div>
+    <div ngbDropdown>
+      <div class="form__content-input">
+        <div></div>
+        <button
+          type="button"
+          class="btn form-control"
+          id="dropdownBasic1"
+          ngbDropdownToggle
+        >
+          Tipo de Proyecto
+        </button>
+      </div>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button ngbDropdownItem>Action - 1</button>
+        <button ngbDropdownItem>Another Action</button>
+        <button ngbDropdownItem>Something else is here</button>
+      </div>
+    </div>
+    <div ngbDropdown>
+      <div class="form__content-input">
+        <div></div>
+        <button
+          type="button"
+          class="btn form-control"
+          id="dropdownBasic1"
+          ngbDropdownToggle
+        >
+          Tipo de Superficie
+        </button>
+      </div>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button ngbDropdownItem>Action - 1</button>
+        <button ngbDropdownItem>Another Action</button>
+        <button ngbDropdownItem>Something else is here</button>
+      </div>
+    </div>
+    <strong>Dimensiones del mural</strong>
+    <div class="form__content-input">
+      <div></div>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Ancho (en metros, máximo 4m)"
+      />
+    </div>
+    <div class="form__content-input">
+      <div></div>
+      <input type="text" class="form-control" placeholder="Largo (en metros)" />
+    </div>
+    <div class="form__content-textarea">
+      <div></div>
+      <textarea
+        name=""
+        id=""
+        class="form-control"
+        cols="30"
+        placeholder="Descripción de tu idea"
+      ></textarea>
+    </div>
+    <app-border-button class="mt-4" name="Enviar" />
+  </form>
+</article>

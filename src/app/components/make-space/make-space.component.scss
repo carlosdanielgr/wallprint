@@ -12,7 +12,6 @@
     @include screen(med) {
       display: grid;
       grid-template-columns: repeat(10, 1fr);
-      //   grid-template-rows: repeat(8, 1fr);
       > img {
         &:first-child {
           grid-column: 1/5;
