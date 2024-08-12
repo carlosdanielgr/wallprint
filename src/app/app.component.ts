@@ -9,6 +9,7 @@ import { BeforeAfterComponent } from './components/before-after/before-after.com
 import { MakeSpaceComponent } from './components/make-space/make-space.component';
 import { VideoComponent } from './components/video/video.component';
 import { FormComponent } from './components/form/form.component';
+import { FaqsComponent } from './components/faqs/faqs.component';
 
 @Component({
   selector: 'app-root',
@@ -23,6 +24,7 @@ import { FormComponent } from './components/form/form.component';
     MakeSpaceComponent,
     VideoComponent,
     FormComponent,
+    FaqsComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

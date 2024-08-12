@@ -120,3 +120,38 @@ article {
     color: #000;
   }
 }
+
+.accordion-item {
+  border: 0;
+}
+
+.accordion-button {
+  gap: 1rem;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0 !important;
+  border-bottom: 3px solid #303030;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  &:not(.collapsed) {
+    background-color: transparent;
+    color: #303030;
+  }
+  &::after {
+    width: 2rem;
+    height: 2rem;
+    background-size: 2rem;
+  }
+  > span {
+    font-weight: 500;
+    font-size: 2rem;
+  }
+}
+
+.accordion-body {
+  border: 1px solid #303030;
+}
