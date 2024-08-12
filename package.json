@@ -1,7 +1,6 @@
 {
-  "name": "wallpint",
+  "name": "wallprint",
   "version": "0.0.0",
-  "homepage": "https://github.com/carlosdanielgr/wallprint/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
