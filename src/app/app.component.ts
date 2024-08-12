@@ -6,6 +6,7 @@ import { OurWorkComponent } from './components/our-work/our-work.component';
 import { WeWorkComponent } from './components/we-work/we-work.component';
 import { WhyChooseComponent } from './components/why-choose/why-choose.component';
 import { BeforeAfterComponent } from './components/before-after/before-after.component';
+import { MakeSpaceComponent } from './components/make-space/make-space.component';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,7 @@ import { BeforeAfterComponent } from './components/before-after/before-after.com
     WeWorkComponent,
     WhyChooseComponent,
     BeforeAfterComponent,
+    MakeSpaceComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
