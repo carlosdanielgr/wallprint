@@ -13,6 +13,9 @@
     > span {
       flex: 1;
     }
+    > span {
+      font-size: 1.5rem;
+    }
     @include screen(custom, max, 992) {
       flex-direction: column;
       justify-content: center;
@@ -32,9 +35,6 @@
     @include screen(custom, max, 992) {
       align-items: center;
     }
-  }
-  > span {
-    font-size: 1.5rem;
   }
   &__info {
     display: flex;
