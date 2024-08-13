@@ -6,7 +6,7 @@
   @include screen(med-small) {
     padding: 2rem;
     grid-template-columns: repeat(2, 1fr);
-    > button {
+    > a {
       justify-self: start;
       font-size: 1.5rem;
     }
@@ -66,17 +66,18 @@
   }
   &__button {
     border: 1px solid #000;
+    border-radius: 0;
     box-shadow: 4px 4px 1px #000;
     max-width: fit-content;
     justify-self: center;
     height: fit-content;
   }
   &__banner-img {
-    height: calc(7rem + 5vw);
     > img {
       height: 100%;
     }
     @include screen(med-small) {
+      height: calc(7rem + 7vw);
       margin-top: -4rem;
     }
   }

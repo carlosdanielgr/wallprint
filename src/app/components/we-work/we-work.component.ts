@@ -8,4 +8,8 @@ import { BorderButtonComponent } from '../../shared/components/border-button/bor
   templateUrl: './we-work.component.html',
   styleUrl: './we-work.component.scss',
 })
-export class WeWorkComponent {}
+export class WeWorkComponent {
+  redirection() {
+    location.href = '#form';
+  }
+}

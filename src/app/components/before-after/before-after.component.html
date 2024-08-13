@@ -13,7 +13,8 @@
         <div class="before-after__images">
           @for (item of item_images; track $index) {
           <figure class="before-after__image">
-            <img [src]="item" alt="image" />
+            <img [src]="item.after" alt="after" />
+            <img [src]="item.before" alt="before" />
           </figure>
           }
         </div>
@@ -21,5 +22,6 @@
       }
     </ngb-carousel>
   </article>
-  <app-border-button name="¿Quieres saber más?" />
+  <app-border-button name="¿Quieres saber más?" (click)="redirection()" />
+  <div id="make-space"></div>
 </div>

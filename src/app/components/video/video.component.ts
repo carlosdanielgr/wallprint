@@ -8,4 +8,8 @@ import { BorderButtonComponent } from '../../shared/components/border-button/bor
   templateUrl: './video.component.html',
   styleUrl: './video.component.scss',
 })
-export class VideoComponent {}
+export class VideoComponent {
+  redirection() {
+    location.href = '#form';
+  }
+}

@@ -3,15 +3,26 @@ import { Component } from '@angular/core';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { BorderButtonComponent } from '../../shared/components/border-button/border-button.component';
 
+interface Images {
+  before: string;
+  after: string;
+}
+
 const URL_IMAGE = './assets/images/before-after/';
 
-const ORIGINAL_IMAGES: string[] = [
-  `${URL_IMAGE}before1.png`,
-  `${URL_IMAGE}after1.png`,
-  `${URL_IMAGE}before2.png`,
-  `${URL_IMAGE}after2.png`,
-  `${URL_IMAGE}before3.png`,
-  `${URL_IMAGE}after3.png`,
+const ORIGINAL_IMAGES: Images[] = [
+  {
+    before: `${URL_IMAGE}before1.png`,
+    after: `${URL_IMAGE}after1.png`,
+  },
+  {
+    before: `${URL_IMAGE}before2.png`,
+    after: `${URL_IMAGE}after2.png`,
+  },
+  {
+    before: `${URL_IMAGE}before3.png`,
+    after: `${URL_IMAGE}after3.png`,
+  },
 ];
 
 @Component({
@@ -22,7 +33,7 @@ const ORIGINAL_IMAGES: string[] = [
   styleUrl: './before-after.component.scss',
 })
 export class BeforeAfterComponent {
-  images: Array<string[]> = [];
+  images: Array<Images[]> = [];
 
   constructor() {
     if (window.innerWidth > 992) this.splitArray(3);
@@ -40,5 +51,9 @@ export class BeforeAfterComponent {
         this.images.push(ORIGINAL_IMAGES.sort(() => -1).slice(start, end));
       } else this.images.push(ORIGINAL_IMAGES.slice(start, end));
     }
+  }
+
+  redirection() {
+    location.href = '#form';
   }
 }

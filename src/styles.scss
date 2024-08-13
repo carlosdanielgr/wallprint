@@ -66,16 +66,17 @@ article {
 
 .carousel-control-prev,
 .carousel-control-next {
-  width: 2.5rem;
+  width: 0;
   opacity: 1;
 }
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-color: #000;
-  height: 3rem;
+  height: 2.5rem;
   width: 2.5rem;
   border-radius: 50%;
   padding: 1rem;
+  border: 5px solid #000;
 }
 
 .form-control {
