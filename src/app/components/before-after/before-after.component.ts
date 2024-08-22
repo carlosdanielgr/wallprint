@@ -12,16 +12,16 @@ const URL_IMAGE = './assets/images/before-after/';
 
 const ORIGINAL_IMAGES: Images[] = [
   {
-    before: `${URL_IMAGE}before1.png`,
-    after: `${URL_IMAGE}after1.png`,
+    before: `${URL_IMAGE}sinwallprint.webp`,
+    after: `${URL_IMAGE}conwallprint.webp`,
   },
   {
-    before: `${URL_IMAGE}before2.png`,
-    after: `${URL_IMAGE}after2.png`,
+    before: `${URL_IMAGE}sinwallprint2.webp`,
+    after: `${URL_IMAGE}conwallprint2.webp`,
   },
   {
-    before: `${URL_IMAGE}before3.png`,
-    after: `${URL_IMAGE}after3.png`,
+    before: `${URL_IMAGE}sinwallprint3.webp`,
+    after: `${URL_IMAGE}conwallprint3.webp`,
   },
 ];
 
@@ -37,7 +37,7 @@ export class BeforeAfterComponent {
 
   constructor() {
     if (window.innerWidth > 992) this.splitArray(3);
-    else if (window.innerWidth > 400) this.splitArray(2);
+    else if (window.innerWidth > 600) this.splitArray(2);
     else this.splitArray(1);
   }
 

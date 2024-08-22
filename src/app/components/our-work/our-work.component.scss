@@ -1,20 +1,30 @@
+@use "../../../styles/mixins" as *;
+
 .our-work {
   padding: 2rem 1rem 3rem;
   &__list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
     gap: 1.5rem;
   }
   &__card {
     display: flex;
     flex-direction: column;
     > img {
+      height: 20rem;
       filter: drop-shadow(7px 7px 0px #000000);
+      @include screenLimit(500px, 1199px) {
+        height: calc(10rem + 15vh);
+      }
+      @include screen(med) {
+        height: 20rem;
+      }
     }
     > button {
       max-width: fit-content;
       padding: 1rem 0.5rem;
       font-size: 2rem;
+      white-space: nowrap;
       > i {
         margin-left: 1rem;
         font-size: 2rem;

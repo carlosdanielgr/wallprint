@@ -14,9 +14,9 @@
     display: grid;
     gap: 1rem;
     padding: 0 2rem;
-    height: calc(10rem + 10vw);
+    height: calc(10rem + 20vw);
     max-height: 20rem;
-    @include screen(custom, min, 400) {
+    @include screen(custom, min, 600) {
       grid-template-columns: repeat(2, 1fr);
     }
     @include screen(med-small) {
