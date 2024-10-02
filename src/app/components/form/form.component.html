@@ -1,9 +1,14 @@
 <article class="form">
   <h4 class="subtitle mb-4">Contáctanos y cuéntanos tu idea</h4>
-  <form class="form__inputs">
+  <form class="form__inputs" [formGroup]="form">
     <div class="form__content-input">
       <div></div>
-      <input type="text" class="form-control" placeholder="Nombre Completo" />
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Nombre Completo"
+        formControlName="full_name"
+      />
     </div>
     <div class="form__content-input">
       <div></div>
@@ -11,15 +16,26 @@
         type="text"
         class="form-control"
         placeholder="Correo Electrónico"
+        formControlName="email"
       />
     </div>
     <div class="form__content-input">
       <div></div>
-      <input type="text" class="form-control" placeholder="Teléfono" />
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Teléfono"
+        formControlName="phone"
+      />
     </div>
     <div class="form__content-input">
       <div></div>
-      <input type="text" class="form-control" placeholder="Colonia" />
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Colonia"
+        formControlName="city"
+      />
     </div>
     <div ngbDropdown>
       <div class="form__content-input">
@@ -30,13 +46,45 @@
           id="dropdownBasic1"
           ngbDropdownToggle
         >
-          Tipo de Proyecto
+          {{ form.controls["project_type"].value || "Tipo de Proyecto" }}
         </button>
       </div>
       <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <button ngbDropdownItem>Action - 1</button>
-        <button ngbDropdownItem>Another Action</button>
-        <button ngbDropdownItem>Something else is here</button>
+        <button
+          type="button"
+          ngbDropdownItem
+          (click)="onSelectItem('Particular', 'project_type')"
+        >
+          Particular
+        </button>
+        <button
+          type="button"
+          ngbDropdownItem
+          (click)="onSelectItem('Institucional', 'project_type')"
+        >
+          Institucional
+        </button>
+        <button
+          type="button"
+          ngbDropdownItem
+          (click)="onSelectItem('Especialidades', 'project_type')"
+        >
+          Especialidades
+        </button>
+        <button
+          type="button"
+          ngbDropdownItem
+          (click)="onSelectItem('Gliceé', 'project_type')"
+        >
+          Gliceé
+        </button>
+        <button
+          type="button"
+          ngbDropdownItem
+          (click)="onSelectItem('Otros', 'project_type')"
+        >
+          Otros
+        </button>
       </div>
     </div>
     <div ngbDropdown>
@@ -48,13 +96,59 @@
           id="dropdownBasic1"
           ngbDropdownToggle
         >
-          Tipo de Superficie
+          {{ form.controls["surface_type"].value || "Tipo de Superficie" }}
         </button>
       </div>
       <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <button ngbDropdownItem>Action - 1</button>
-        <button ngbDropdownItem>Another Action</button>
-        <button ngbDropdownItem>Something else is here</button>
+        <button
+          type="button"
+          ngbDropdownItem
+          (click)="onSelectItem('Pared', 'surface_type')"
+        >
+          Pared
+        </button>
+        <button
+          type="button"
+          ngbDropdownItem
+          (click)="onSelectItem('Madera', 'surface_type')"
+        >
+          Madera
+        </button>
+        <button
+          type="button"
+          ngbDropdownItem
+          (click)="onSelectItem('Piso', 'surface_type')"
+        >
+          Piso
+        </button>
+        <button
+          type="button"
+          ngbDropdownItem
+          (click)="onSelectItem('Vidrio', 'surface_type')"
+        >
+          Vidrio
+        </button>
+        <button
+          type="button"
+          ngbDropdownItem
+          (click)="onSelectItem('PVC', 'surface_type')"
+        >
+          PVC
+        </button>
+        <button
+          type="button"
+          ngbDropdownItem
+          (click)="onSelectItem('Ladrillo', 'surface_type')"
+        >
+          Ladrillo
+        </button>
+        <button
+          type="button"
+          ngbDropdownItem
+          (click)="onSelectItem('Otros', 'surface_type')"
+        >
+          Otros
+        </button>
       </div>
     </div>
     <strong>Dimensiones del mural</strong>
@@ -64,11 +158,17 @@
         type="text"
         class="form-control"
         placeholder="Ancho (en metros, máximo 4m)"
+        formControlName="width"
       />
     </div>
     <div class="form__content-input">
       <div></div>
-      <input type="text" class="form-control" placeholder="Largo (en metros)" />
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Largo (en metros)"
+        formControlName="length"
+      />
     </div>
     <div class="form__content-textarea">
       <div></div>
@@ -78,8 +178,14 @@
         class="form-control"
         cols="30"
         placeholder="Descripción de tu idea"
+        formControlName="description"
       ></textarea>
     </div>
-    <app-border-button class="mt-4" name="Enviar" />
+    <app-border-button
+      class="mt-4"
+      name="Enviar"
+      [disabled]="loading"
+      (click)="onPostForm()"
+    />
   </form>
 </article>

@@ -9,4 +9,6 @@ import { Component, Input } from '@angular/core';
 })
 export class BorderButtonComponent {
   @Input() name = '';
+
+  @Input() disabled = false;
 }
