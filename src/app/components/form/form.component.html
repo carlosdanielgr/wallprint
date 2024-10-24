@@ -151,6 +151,66 @@
         </button>
       </div>
     </div>
+    <div ngbDropdown>
+      <div class="form__content-input">
+        <div></div>
+        <button
+          type="button"
+          class="btn form-control"
+          id="dropdownBasic1"
+          ngbDropdownToggle
+        >
+          {{ form.controls["floor"].value || "¿Es planta baja o planta alta?" }}
+        </button>
+      </div>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button
+          type="button"
+          ngbDropdownItem
+          (click)="onSelectItem('Planta baja', 'floor')"
+        >
+          Planta baja
+        </button>
+        <button
+          type="button"
+          ngbDropdownItem
+          (click)="onSelectItem('Planta alta', 'floor')"
+        >
+          Planta alta
+        </button>
+      </div>
+    </div>
+    <div ngbDropdown>
+      <div class="form__content-input">
+        <div></div>
+        <button
+          type="button"
+          class="btn form-control"
+          id="dropdownBasic1"
+          ngbDropdownToggle
+        >
+          {{
+            form.controls["exterInter"].value || "¿Es para exterior o interior?"
+          }}
+        </button>
+      </div>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button
+          type="button"
+          ngbDropdownItem
+          (click)="onSelectItem('Exterior', 'exterInter')"
+        >
+          Exterior
+        </button>
+        <button
+          type="button"
+          ngbDropdownItem
+          (click)="onSelectItem('Interior', 'exterInter')"
+        >
+          Interior
+        </button>
+      </div>
+    </div>
     <strong>Dimensiones del mural</strong>
     <div class="form__content-input">
       <div></div>
@@ -166,7 +226,7 @@
       <input
         type="text"
         class="form-control"
-        placeholder="Largo (en metros)"
+        placeholder="Largo x Alto"
         formControlName="length"
       />
     </div>

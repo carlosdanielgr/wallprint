@@ -43,6 +43,8 @@ export class FormComponent implements OnInit {
       width: ['', [Validators.required]],
       description: ['', [Validators.required]],
       length: ['', [Validators.required]],
+      floor: ['', [Validators.required]],
+      exterInter: ['', [Validators.required]],
     });
   }
 
@@ -62,6 +64,8 @@ export class FormComponent implements OnInit {
       width,
       description,
       length,
+      floor,
+      exterInter,
     } = this.form.value;
     const date = new Date();
     const body = {
@@ -75,6 +79,8 @@ export class FormComponent implements OnInit {
       Ancho: width,
       Largo: length,
       Descripción: description,
+      '¿Es planta baja o planta alta?': floor,
+      '¿Es para exterior o interior?': exterInter,
     };
     this.loading = true;
     this.formService.postForm(body).subscribe({
